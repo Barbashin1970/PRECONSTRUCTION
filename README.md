@@ -18,10 +18,10 @@ PRECONSTRUCTION/
 ├── knowledge-base/            # 🇷🇺 База знаний: 8 заметок + индекс
 │   └── sources/               #   три исходных материала в MD (PDF удалены)
 ├── knowledge-base-en/         # 🇬🇧 Зеркальная база на английском (для иностранных студентов)
-├── research/                  # Отчёты скилла: research/<слаг>-<дата>.md
+├── research/                  # Сюда скилл пишет НОВЫЕ отчёты (+ README)
 ├── skills/                    # 📦 Навыки (видимая публикуемая папка) — реальные файлы
-│   ├── preconstruction-ru/    #   🇷🇺 SKILL.md + references/  → /preconstruction-ru
-│   └── preconstruction-en/    #   🇬🇧 SKILL.md + references/  → /preconstruction-en
+│   ├── preconstruction-ru/    #   🇷🇺 SKILL.md + references/ + examples/ (3 эталона)  → /preconstruction-ru
+│   └── preconstruction-en/    #   🇬🇧 SKILL.md + references/ + examples/ (3 эталона)  → /preconstruction-en
 └── .claude/skills/            # симлинки → ../../skills (чтобы /preconstruction-* находились)
 ```
 

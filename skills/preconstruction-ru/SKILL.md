@@ -98,7 +98,9 @@ research-roles.md.
 ## Фаза 3 — Сведение в единый документ
 
 Сведи подтверждённые результаты в один документ по
-[references/report-template.md](references/report-template.md). Документ включает:
+[references/report-template.md](references/report-template.md); перед сведением сверься с
+готовыми примерами в [examples/](examples/) (3 полных отчёта — эталон структуры и планки качества).
+Документ включает:
 executive summary (с пометкой, доказан ли спрос bottom-up), разбор по 5 этапам, **обязательный
 раздел «Применимость ИИ»** с вердиктом, обоснованием и **слоями** (MVP без ИИ → ИИ 2-й очереди),
 питч (Problem-Solution-Market-Tech-Team + roadmap), **раздел «Блокирующие вопросы (go/no-go)»**,

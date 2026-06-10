@@ -3,9 +3,11 @@
 Пошаговая инструкция для слушателя курса «ИИ в строительстве»: как развернуть на ноутбуке
 рабочее место и начать диалог с ИИ-агентом, обученным навыкам пресейл-исследования.
 
-> **Замени перед раздачей студентам:** `<URL_РЕПОЗИТОРИЯ>` — на ссылку опубликованного репозитория
-> (например, на GitHub). QR-код сделай из этой же ссылки в любом генераторе (например,
-> [qr-code-generator.com](https://www.qr-code-generator.com)).
+> **Репозиторий проекта:** https://github.com/Barbashin1970/PRECONSTRUCTION
+>
+> Отсканируй QR-код телефоном — он ведёт на репозиторий:
+>
+> ![QR на репозиторий](https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/Barbashin1970/PRECONSTRUCTION)
 
 Есть **два пути**. Выбери один:
 
@@ -24,12 +26,12 @@
 3. Интернет.
 
 ### Шаги
-1. **Отсканируй QR-код** телефоном (или открой ссылку) → получишь адрес репозитория `<URL_РЕПОЗИТОРИЯ>`.
+1. **Отсканируй QR-код** телефоном (или открой ссылку) → получишь адрес репозитория `https://github.com/Barbashin1970/PRECONSTRUCTION`.
 2. **Скачай проект.** Два варианта:
    - **Проще (без Git):** на странице репозитория нажми зелёную кнопку **Code → Download ZIP**, распакуй папку.
    - **Через Git:** открой терминал и выполни
      ```
-     git clone <URL_РЕПОЗИТОРИЯ>
+     git clone https://github.com/Barbashin1970/PRECONSTRUCTION
      ```
 3. **Открой папку проекта в VS Code:** меню **File → Open Folder…** → выбери папку проекта.
 4. **Зарегистрируйся в Claude:** зайди на [claude.ai](https://claude.ai) и создай профиль.
@@ -71,8 +73,9 @@
 2. **Скачай файлы проекта** (Download ZIP, см. Путь A, шаг 2) — понадобятся папки `knowledge-base/`
    (или `knowledge-base-en/` для английского) и `skills/`.
 3. **Создай Space** в Perplexity (раздел Spaces → Create).
-4. **Загрузи в Space файлы-методичку:** из `skills/preconstruction-ru/` — `SKILL.md` и все 4 файла
-   из `references/`; по желанию добавь заметки из `knowledge-base/`. Они станут справочником.
+4. **Загрузи в Space файлы-методичку:** из `skills/preconstruction-ru/` — `SKILL.md`, все 4 файла
+   из `references/` и 1 готовый отчёт из `examples/` (образец структуры); по желанию добавь заметки
+   из `knowledge-base/`. Они станут справочником.
 5. **Задай Custom Instructions** (роль агента), например:
    > «Ты — ведущий пресейл-аналитик. Используй загруженные файлы как методологию. Веди меня по
    > 5 этапам пресейла: 1) проблема → 2) бизнес-анализ → 3) техэкспертиза → 4) нужен ли ИИ ВНУТРИ
@@ -92,9 +95,11 @@
 Step-by-step guide for a student of the “AI in construction” course: set up a workstation on
 your laptop and start a dialogue with an AI agent trained in the pre-sales research skill.
 
-> **Before sharing with students:** replace `<REPO_URL>` with your published repository link
-> (e.g. on GitHub). Generate the QR code from that same link with any generator (e.g.
-> [qr-code-generator.com](https://www.qr-code-generator.com)).
+> **Project repository:** https://github.com/Barbashin1970/PRECONSTRUCTION
+>
+> Scan the QR code with your phone — it points to the repository:
+>
+> ![Repository QR](https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/Barbashin1970/PRECONSTRUCTION)
 
 There are **two paths**. Pick one:
 
@@ -111,12 +116,12 @@ There are **two paths**. Pick one:
 3. Internet.
 
 ### Steps
-1. **Scan the QR code** with your phone (or open the link) → you get the repo address `<REPO_URL>`.
+1. **Scan the QR code** with your phone (or open the link) → you get the repo address `https://github.com/Barbashin1970/PRECONSTRUCTION`.
 2. **Get the project.** Two options:
    - **Easiest (no Git):** on the repo page click the green **Code → Download ZIP**, unzip.
    - **With Git:** in a terminal run
      ```
-     git clone <REPO_URL>
+     git clone https://github.com/Barbashin1970/PRECONSTRUCTION
      ```
 3. **Open the project folder in VS Code:** **File → Open Folder…** → select the project folder.
 4. **Register at Claude:** go to [claude.ai](https://claude.ai) and create a profile.
@@ -155,8 +160,9 @@ Same approach as the hackathon: AI as a research assistant while you drive it th
 2. **Download the project files** (Download ZIP, see Path A step 2) — you’ll need `knowledge-base-en/`
    (or `knowledge-base/` for Russian) and `skills/`.
 3. **Create a Space** in Perplexity (Spaces → Create).
-4. **Upload the methodology files:** from `skills/preconstruction-en/` — `SKILL.md` and all 4 files
-   from `references/`; optionally add notes from `knowledge-base-en/`. They become the reference.
+4. **Upload the methodology files:** from `skills/preconstruction-en/` — `SKILL.md`, all 4 files
+   from `references/` and one ready report from `examples/` (a structure sample); optionally add
+   notes from `knowledge-base-en/`. They become the reference.
 5. **Set Custom Instructions** (the agent’s role), e.g.:
    > “You are a lead pre-sales analyst. Use the uploaded files as the methodology. Walk me through
    > the 5 pre-sales stages: 1) problem → 2) business analysis → 3) feasibility → 4) is AI needed

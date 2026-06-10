@@ -98,7 +98,9 @@ missing. If the audit reveals a serious gap — re-run the relevant stream narro
 ## Phase 3 — Consolidate into a single document
 
 Merge audit-confirmed results into one document per
-[references/report-template.md](references/report-template.md). It includes: executive
+[references/report-template.md](references/report-template.md); before consolidating, check the
+worked examples in [examples/](examples/) (3 complete reports — the structure & quality bar).
+It includes: executive
 summary (flagging whether demand is proven bottom-up), a walk-through of all 5 stages, a
 **mandatory "AI applicability" section** with verdict, rationale and **layers** (no-AI MVP → AI
 phase 2), the pitch (Problem-Solution-Market-Tech-Team + roadmap), a **"Blocking questions

@@ -3,6 +3,7 @@
 Merge audit-confirmed results into one file `research/<slug>-YYYY-MM-DD.md`. Every claim has a
 source or an explicit confidence tag (primary / vendor-claim / hypothesis). To chat, surface
 Executive summary + Pitch + AI verdict.
+Ready structure references are in [examples/](../examples/) (3 complete reports).
 
 ```markdown
 ---
