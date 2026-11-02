@@ -198,6 +198,9 @@ def check_manifests():
         problem(".claude-plugin/marketplace.json: source плагина не «./» — решение Р-1 разбора")
     if not market.get("owner", {}).get("name"):
         problem(".claude-plugin/marketplace.json: нет owner.name — обязательное поле")
+    if not plugin.get("license") or not (ROOT / "LICENSE").is_file():
+        problem("лицензия: нужны файл LICENSE и поле license в plugin.json — без них каталог "
+                "плагинов Anthropic не примет плагин")
     return version
 
 

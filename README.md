@@ -136,6 +136,11 @@ claude plugin eval . --max-cost-usd 5   # проверки поведения �
 пользователи плагина получают правку только с новой версией. Почему устроено так —
 [docs/PAKET-RAZBOR.md](docs/PAKET-RAZBOR.md); отложенное — [docs/BEKLOG.md](docs/BEKLOG.md).
 
+## Лицензия
+
+Тексты и навыки — **CC BY 4.0** (с указанием источника), код — **MIT**. Подробно и что под
+другими условиями — [LICENSE-CONTENT.md](LICENSE-CONTENT.md) и [LICENSE](LICENSE).
+
 ---
 
 # PRECONSTRUCTION — AI pre-sales for builders (EN)
@@ -165,3 +170,6 @@ Once installed, just say "research this idea: …". On claude.ai and in other ch
 run one by one instead of in parallel — the skill is written for that. Skills in the mobile
 apps are not described in Anthropic's help (as of 2026-11-02). Knowledge base (English):
 [knowledge-base-en/README.md](knowledge-base-en/README.md).
+
+**License:** texts and skills — CC BY 4.0 (with attribution), code — MIT; see
+[LICENSE-CONTENT.md](LICENSE-CONTENT.md) and [LICENSE](LICENSE).

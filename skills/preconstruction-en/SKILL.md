@@ -1,6 +1,7 @@
 ---
 name: preconstruction-en
 description: "Runs a pre-sales (preconstruction) research study of a construction or construction-IT idea using the 5-stage AI-assisted pre-sales method: a scoping interview, research streams (business analysis, marketing, technical feasibility, whether AI is needed inside the product), a skeptical audit, and one consolidated report with a pitch. Use when the user wants to research, validate or package a project idea, size the market and competitors, check feasibility, or decide whether the product needs AI. English version; Russian mirror is preconstruction-ru."
+license: "CC-BY-4.0"
 metadata:
   version: "1.1.0"
   source: "https://github.com/Barbashin1970/PRECONSTRUCTION"
