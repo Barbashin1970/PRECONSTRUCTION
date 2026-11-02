@@ -55,5 +55,6 @@ BEFORE implementation begins, where 70–80% of the cost of mistakes is saved.
 1. **Learn the methodology** — read 01 → 02 → 03 → 04 → 05.
 2. **Run a real investigation of an idea** — launch the skill (dialogue + multi-threaded
    AI research + audit + a single report):
-   - 🇷🇺 `/preconstruction-ru` → [.claude/skills/preconstruction-ru/SKILL.md](../.claude/skills/preconstruction-ru/SKILL.md)
-   - 🇬🇧 `/preconstruction-en` → [.claude/skills/preconstruction-en/SKILL.md](../.claude/skills/preconstruction-en/SKILL.md)
+   - 🇷🇺 `/preconstruction-ru` → [skills/preconstruction-ru/SKILL.md](../skills/preconstruction-ru/SKILL.md)
+   - 🇬🇧 `/preconstruction-en` → [skills/preconstruction-en/SKILL.md](../skills/preconstruction-en/SKILL.md)
+   - how to install the skill in Claude Code, claude.ai, Perplexity and other environments — [README](../README.md#install--pick-your-environment)

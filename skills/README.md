@@ -1,49 +1,38 @@
-# SKILL-Preconstruction — навыки пресейл-исследования (RU/EN)
+# Навыки пресейл-исследования (RU/EN)
 
-Видимая **публикуемая** папка с двумя зеркальными Claude Code навыками для качественного
-пресейл-исследования (preconstruction) строительных и ИТ-для-стройки идей:
+Единственный источник двух зеркальных навыков для пресейл-исследования (preconstruction)
+строительных и ИТ-для-стройки идей. Формат — открытый стандарт Agent Skills: папка
+с `SKILL.md` и справочниками. Отсюда собираются плагин, архивы и установка.
 
-| Навык | Язык | Точка входа |
-|-------|------|-------------|
-| [`preconstruction-ru/`](preconstruction-ru/SKILL.md) | 🇷🇺 русский | `/preconstruction-ru` |
-| [`preconstruction-en/`](preconstruction-en/SKILL.md) | 🇬🇧 английский | `/preconstruction-en` |
+| Навык | Язык отчёта | Вызов в Claude Code |
+|-------|-------------|---------------------|
+| [`preconstruction-ru/`](preconstruction-ru/SKILL.md) | 🇷🇺 русский | `/preconstruction-ru`, в плагине — `/preconstruction:preconstruction-ru` |
+| [`preconstruction-en/`](preconstruction-en/SKILL.md) | 🇬🇧 английский | `/preconstruction-en`, в плагине — `/preconstruction:preconstruction-en` |
 
-Каждый навык самодостаточен: `SKILL.md` + `references/` из 4 файлов
-(`interview-protocol`, `research-roles`, `audit-checklist`, `report-template`).
+В каждом навыке: `SKILL.md`, `references/` (протокол интервью, промпты потоков, критерии
+«нужен ли ИИ внутри», чек-лист аудита, шаблон отчёта) и `examples/` (три эталонных отчёта).
+Навык самодостаточен: базы знаний и путей вне своей папки не требует.
 
-**Механика:** диалог-скоупинг → несколько параллельных потоков-агентов (бизнес-анализ,
-маркетинг, техэкспертиза, применимость ИИ) → адверсариальный аудит их отчётов → единый
-пресейл-отчёт с питчем и вердиктом «нужен ли ИИ ВНУТРИ продукта».
+**Механика:** диалог-скоупинг → потоки-исследователи (бизнес-анализ, маркетинг,
+техэкспертиза, применимость ИИ; в Claude Code — параллельно, в чатах — по очереди) →
+скептический аудит → единый отчёт с питчем и вердиктом «нужен ли ИИ ВНУТРИ продукта».
 
-## Как установить в любой проект
+**Установка** во все среды — [README в корне](../README.md#установка--выберите-свою-среду).
 
-Скопируйте нужную папку навыка в `.claude/skills/` вашего проекта (или в
-`~/.claude/skills/` для глобального доступа), затем вызовите `/preconstruction-ru`
-(или `/preconstruction-en`) в Claude Code. База знаний (`knowledge-base/` и
-`knowledge-base-en/`) — опциональный учебник, навык работает и без неё.
-
-## Связь с этим проектом
-
-Это **канонические реальные файлы**. В `.claude/skills/` этого проекта лежат **симлинки**
-на эти папки — чтобы Claude Code находил навыки (`/preconstruction-*`), а вы публиковали
-видимую `skills/`. Правьте здесь — изменения сразу видны и в `.claude/skills/`.
+**Правка.** Правьте здесь: `.claude/skills/` этого проекта — симлинки на эти папки.
+После правки — `python3 tools/build_zips.py` и `python3 tools/check.py`; оба навыка
+правятся вместе, сторож сверяет их состав. Шапку `SKILL.md` пишите значениями в одну строку
+в двойных кавычках и только полями `name`, `description`, `license`, `compatibility`,
+`metadata`, `allowed-tools`: другие поля claude.ai и Skills API отвергают.
 
 ---
 
-# SKILL-Preconstruction — pre-sales research skills (RU/EN) — EN
+# Pre-sales research skills (RU/EN) — EN
 
-Visible, **publishable** folder with two mirrored Claude Code skills for high-quality
-preconstruction (pre-sales) research of construction and construction-IT ideas.
+The single source of two mirrored skills in the open Agent Skills format: a folder with
+`SKILL.md` and reference files. The plugin, the archives and the installers are built from
+here. Each skill is self-contained and needs nothing outside its folder.
 
-| Skill | Language | Entry point |
-|-------|----------|-------------|
-| [`preconstruction-ru/`](preconstruction-ru/SKILL.md) | 🇷🇺 Russian | `/preconstruction-ru` |
-| [`preconstruction-en/`](preconstruction-en/SKILL.md) | 🇬🇧 English | `/preconstruction-en` |
-
-**Mechanics:** scoping dialogue → several parallel research-agent streams (business analysis,
-marketing, technical feasibility, AI-necessity) → adversarial audit → one consolidated
-pre-sales report with a pitch and an "is AI needed INSIDE the product" verdict.
-
-**Install:** copy a skill folder into your project's `.claude/skills/` (or `~/.claude/skills/`
-for global access), then invoke `/preconstruction-en` in Claude Code. These are the canonical
-real files; this project's `.claude/skills/` contains symlinks to them.
+**Install** in any environment — see the [root README](../README.md#install--pick-your-environment).
+**Edit** here (`.claude/skills/` holds symlinks to these folders), then run
+`python3 tools/build_zips.py` and `python3 tools/check.py`.

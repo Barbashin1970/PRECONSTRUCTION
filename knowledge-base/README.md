@@ -55,5 +55,6 @@ updated: 2026-06-10
 1. **Учиться методологии** — читай 01 → 02 → 03 → 04 → 05.
 2. **Провести реальное исследование идеи** — запусти скилл (диалог + многопоточное
    ИИ-исследование + аудит + единый отчёт):
-   - 🇷🇺 `/preconstruction-ru` → [.claude/skills/preconstruction-ru/SKILL.md](../.claude/skills/preconstruction-ru/SKILL.md)
-   - 🇬🇧 `/preconstruction-en` → [.claude/skills/preconstruction-en/SKILL.md](../.claude/skills/preconstruction-en/SKILL.md)
+   - 🇷🇺 `/preconstruction-ru` → [skills/preconstruction-ru/SKILL.md](../skills/preconstruction-ru/SKILL.md)
+   - 🇬🇧 `/preconstruction-en` → [skills/preconstruction-en/SKILL.md](../skills/preconstruction-en/SKILL.md)
+   - как поставить навык в Claude Code, claude.ai, Perplexity и другие среды — [README](../README.md)

@@ -1,0 +1,22 @@
+{
+  "name": "preconstruction",
+  "displayName": "Preconstruction — AI pre-sales research",
+  "version": "1.1.0",
+  "description": "Two mirrored skills (RU/EN) for pre-sales research of construction and construction-IT ideas: scoping interview, parallel research streams, skeptical audit, one report with a pitch and an honest verdict on whether the product needs AI inside.",
+  "author": {
+    "name": "Oleg Barbashin",
+    "url": "https://github.com/Barbashin1970"
+  },
+  "homepage": "https://github.com/Barbashin1970/PRECONSTRUCTION",
+  "repository": "https://github.com/Barbashin1970/PRECONSTRUCTION",
+  "keywords": [
+    "preconstruction",
+    "presale",
+    "pre-sales",
+    "construction",
+    "market-research",
+    "pitch",
+    "ai-necessity",
+    "russian"
+  ]
+}

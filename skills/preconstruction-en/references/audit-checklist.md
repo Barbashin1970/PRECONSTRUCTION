@@ -1,13 +1,19 @@
 # Audit checklist (Phase 2)
 
 Stream reports are a draft, not truth. Launch auditor streams (one per report; in "full" mode,
-2 independent auditors on stage 4 and on key market numbers). The auditor is **skeptical**: by
+2 independent auditors on stage 4 and on key market numbers). Where there is no `Agent` tool,
+the audit is a separate pass after all streams: reread each report as a skeptic and give a
+verdict in the format below. The auditor is **skeptical**: by
 default, treat a claim as unproven until confirmed.
 
 ## What the auditor checks
 
 1. **Numbers and facts.** Does each number have a source? Did the LLM fabricate it? (Special
-   risk — precise numbers without a citation; see the LLM-limits lesson in the knowledge base.)
+   risk — precise numbers without a citation; see "LLM limits" in [ai-necessity-criteria.md](ai-necessity-criteria.md).)
+   **Provenance:** does every claim carry a `[primary]` / `[from search results]` /
+   `[vendor-claim]` / `[hypothesis]` tag? Find the fact the verdict depends on most and see
+   what it rests on: if on `[from search results]` — lower the confidence and move it to the
+   blocking questions.
 2. **Vendor-claims and sanity.** Is the number independent/primary or vendor/marketing? Discount
    vendor-claims (effects like "−50%", "98% accuracy" are usually marketing). Sanity-check
    **magnitude**: catch gross 10–20× errors (a common failure — market/volume off by an order).

@@ -1,0 +1,12 @@
+# Переводы строк в репозитории — LF, чтобы install.sh запускался на macOS и Linux,
+# откуда бы его ни закоммитили.
+* text=auto eol=lf
+
+# PowerShell — CRLF, привычно для Windows
+*.ps1 text eol=crlf
+
+# Двоичные файлы: никаких преобразований, иначе архивы навыков ломаются
+*.zip binary
+*.pdf binary
+*.png binary
+*.jpg binary

@@ -1,7 +1,7 @@
 # Стенд слушателя · Student setup
 
-Пошаговая инструкция для слушателя курса «ИИ в строительстве»: как развернуть на ноутбуке
-рабочее место и начать диалог с ИИ-агентом, обученным навыкам пресейл-исследования.
+Пошаговая инструкция для слушателя курса «ИИ в строительстве»: как за десять минут
+подключить ИИ-агента, обученного навыку пресейл-исследования, и начать с ним диалог.
 
 > **Репозиторий проекта:** https://github.com/Barbashin1970/PRECONSTRUCTION
 >
@@ -9,91 +9,88 @@
 >
 > ![QR на репозиторий](https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/Barbashin1970/PRECONSTRUCTION)
 
-Есть **два пути**. Выбери один:
+Есть **три пути**. Выбери один:
 
-| Путь | Что нужно | Кому |
-|------|-----------|------|
-| **A. VS Code + Claude Code** | Платный план Claude (Pro/Max) или курсовой/командный аккаунт | Хочешь полноценный навык с многопоточным исследованием |
-| **B. Perplexity (бесплатно)** | Любой аккаунт Perplexity | Нет платного Claude — проходишь методологию вручную |
+| Путь | Что нужно | Как идёт исследование |
+|---|---|---|
+| **A. VS Code + Claude Code** | платный план Claude (Pro, Max) или курсовой/командный аккаунт | полноценно: несколько потоков-исследователей работают параллельно |
+| **B. claude.ai — сайт или приложение Claude** | аккаунт Claude; по справке Anthropic навыки есть и на бесплатном тарифе | те же этапы, но потоки идут по очереди |
+| **C. Perplexity — бесплатно** | любой аккаунт Perplexity | те же этапы по очереди, с веб-поиском Perplexity |
+
+На всех путях навык один и тот же; отличается только среда.
 
 ---
 
-## 🇷🇺 Путь A — VS Code + Claude Code (полноценный навык)
+## 🇷🇺 Путь A — VS Code + Claude Code
 
 ### Что установить заранее
-1. **Git** — [git-scm.com/downloads](https://git-scm.com/downloads) (нужен, чтобы скачать проект; можно и без него — см. шаг 2).
-2. **VS Code** (версия 1.98 или новее) — [code.visualstudio.com](https://code.visualstudio.com/).
-3. Интернет.
+1. **VS Code** — [code.visualstudio.com](https://code.visualstudio.com/).
+2. **Git** — [git-scm.com/downloads](https://git-scm.com/downloads): Claude Code забирает
+   плагин с GitHub клонированием. На macOS и Linux Git обычно уже есть.
+3. Интернет. Скачивать проект вручную **не нужно**: навык ставится плагином прямо из GitHub.
 
 ### Шаги
-1. **Отсканируй QR-код** телефоном (или открой ссылку) → получишь адрес репозитория `https://github.com/Barbashin1970/PRECONSTRUCTION`.
-2. **Скачай проект.** Два варианта:
-   - **Проще (без Git):** на странице репозитория нажми зелёную кнопку **Code → Download ZIP**, распакуй папку.
-   - **Через Git:** открой терминал и выполни
-     ```
-     git clone https://github.com/Barbashin1970/PRECONSTRUCTION
-     ```
-3. **Открой папку проекта в VS Code:** меню **File → Open Folder…** → выбери папку проекта.
-4. **Зарегистрируйся в Claude:** зайди на [claude.ai](https://claude.ai) и создай профиль.
-   > ⚠️ Claude Code работает только с **платным планом** (Claude **Pro** или **Max**) либо с
-   > курсовым/командным аккаунтом. На бесплатном тарифе не запустится — тогда выбирай **Путь B**.
-   > Проверь актуальные планы на [claude.ai](https://claude.ai).
-5. **Установи расширение Claude Code:** в VS Code открой панель расширений
+1. **Зарегистрируйся в Claude:** [claude.ai](https://claude.ai).
+   > ⚠️ Claude Code работает с **платным планом** (Pro или Max) либо с курсовым/командным
+   > аккаунтом. Нет платного плана — выбирай путь B или C. Актуальные тарифы — на [claude.ai](https://claude.ai).
+2. **Установи расширение Claude Code:** в VS Code открой панель расширений
    (`Ctrl+Shift+X` / `Cmd+Shift+X`), найди **«Claude Code»**, нажми **Install**.
-   Отдельно ставить что-либо из командной строки не нужно. Доку: [code.claude.com/docs/en/vs-code](https://code.claude.com/docs/en/vs-code).
-6. **Войди в аккаунт:** при первом запуске расширение откроет вход через браузер — авторизуйся своим Claude-профилем.
-7. **Активируй навыки (важно, особенно на Windows).** Навыки лежат в папке `skills/` проекта.
-   Скопируй обе папки навыков в свою личную папку навыков Claude, чтобы они точно подхватились:
-   - **macOS / Linux** (терминал в папке проекта):
-     ```
-     mkdir -p ~/.claude/skills && cp -R skills/preconstruction-ru skills/preconstruction-en ~/.claude/skills/
-     ```
-   - **Windows** (PowerShell в папке проекта):
-     ```
-     New-Item -ItemType Directory -Force $HOME\.claude\skills | Out-Null
-     Copy-Item -Recurse -Force skills\preconstruction-ru, skills\preconstruction-en $HOME\.claude\skills\
-     ```
-   > Почему: в репозитории `.claude/skills/` — это ссылки-симлинки на папку `skills/`. На Windows
-   > Git часто клонирует их как обычный текст, и навык не виден. Копирование реальных папок решает это раз и навсегда.
-8. **Начни работу:** открой чат Claude Code в VS Code и набери
+   Документация: [code.claude.com/docs/en/vs-code](https://code.claude.com/docs/en/vs-code).
+3. **Войди в аккаунт:** при первом запуске расширение откроет вход через браузер.
+4. **Поставь навык.** В окне Claude Code набери:
    ```
-   /preconstruction-ru
+   /plugin install preconstruction --marketplace Barbashin1970/PRECONSTRUCTION
    ```
-   (или `/preconstruction-en` для отчёта на английском), затем опиши идею: «проработай идею: …».
-   Агент проведёт интервью, запустит несколько потоков-исследователей, проверит их и соберёт
-   единый отчёт в папке `research/`.
+   и выбери **«Install for you»** (для себя). Если команда не сработала — версия старая;
+   тогда набери `/plugins`, на вкладке **Marketplaces** добавь `Barbashin1970/PRECONSTRUCTION`,
+   на вкладке **Plugins** нажми **Install** у `preconstruction`.
+   > Одинаково на Windows, macOS и Linux: ничего не копируешь руками.
+5. **Начни работу:** открой любую папку (File → Open Folder…), в чате Claude Code напиши
+   «проработай идею: …» — или вызови навык явно: `/preconstruction:preconstruction-ru`
+   (отчёт на русском) или `/preconstruction:preconstruction-en` (на английском).
+   Агент проведёт интервью, запустит потоки-исследователи, проверит их и сохранит
+   отчёт в папку `research/` открытой папки.
 
 ---
 
-## 🇷🇺 Путь B — Perplexity (бесплатно, методология вручную)
+## 🇷🇺 Путь B — claude.ai (сайт или приложение Claude)
 
-Это тот же подход, что на хакатоне: ИИ как исследовательский ассистент, а ты ведёшь его по этапам.
+1. **Скачай архив навыка** — не распаковывай его:
+   [preconstruction-ru.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/claude/preconstruction-ru.zip)
+   (для отчёта на английском — [preconstruction-en.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/claude/preconstruction-en.zip)).
+2. **Войди** на [claude.ai](https://claude.ai) или открой приложение Claude на компьютере.
+3. **Включи выполнение кода:** **Settings → Capabilities → Code execution and file creation**
+   (в новом меню настроек пункт называется **Create and edit files**).
+4. **Загрузи навык:** **Customize → Skills → «+» → Create skill → Upload a skill** → выбери архив.
+5. **Начни работу:** в новом чате напиши «проработай идею: …». Отчёт придёт файлом для скачивания.
 
-1. **Зарегистрируйся** на [perplexity.ai](https://www.perplexity.ai) (бесплатного аккаунта хватит).
-2. **Скачай файлы проекта** (Download ZIP, см. Путь A, шаг 2) — понадобятся папки `knowledge-base/`
-   (или `knowledge-base-en/` для английского) и `skills/`.
-3. **Создай Space** в Perplexity (раздел Spaces → Create).
-4. **Загрузи в Space файлы-методичку:** из `skills/preconstruction-ru/` — `SKILL.md`, все 4 файла
-   из `references/` и 1 готовый отчёт из `examples/` (образец структуры); по желанию добавь заметки
-   из `knowledge-base/`. Они станут справочником.
-5. **Задай Custom Instructions** (роль агента), например:
-   > «Ты — ведущий пресейл-аналитик. Используй загруженные файлы как методологию. Веди меня по
-   > 5 этапам пресейла: 1) проблема → 2) бизнес-анализ → 3) техэкспертиза → 4) нужен ли ИИ ВНУТРИ
-   > продукта → 5) питч. Опирайся на источники, указывай их, разделяй "сделано С ПОМОЩЬЮ ИИ" и
-   > "ИИ ВНУТРИ", будь честным насчёт необходимости ИИ.»
-6. **Работай по тредам:** заводи отдельный тред на каждый этап (как 5 шагов методологии),
-   в конце попроси собрать единый отчёт и питч.
+> На бесплатном тарифе лимиты сообщений ниже — для учебного прогона выбирай глубину «быстрая».
+> С телефона архив не загрузить; работает ли загруженный навык в мобильном приложении,
+> справка Anthropic не говорит — проверь сам.
 
-> Отличие от Пути A: Perplexity не запускает несколько агентов параллельно — ты сам ведёшь его
-> по этапам. Зато бесплатно и без установки.
+---
+
+## 🇷🇺 Путь C — Perplexity (бесплатно)
+
+1. **Зарегистрируйся** на [perplexity.ai](https://www.perplexity.ai).
+2. **Скачай архив для Perplexity:**
+   [preconstruction-ru.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/perplexity/preconstruction-ru.zip)
+   (английский — [preconstruction-en.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/perplexity/preconstruction-en.zip)).
+   Это **другой** архив, чем на пути B: бери именно из папки `perplexity`.
+3. **Загрузи навык:** **Настройка → Навыки → Создать навык → Загрузить навык** → выбери архив.
+4. **Начни работу:** в новом треде напиши «проработай идею: …».
+
+> Если раздела «Навыки» нет: создай **Space**, загрузи в него файлы из распакованного архива
+> и задай в Custom Instructions: «Следуй инструкции из файла SKILL.md; остальные файлы —
+> справочники к ней».
 
 ---
 ---
 
-# 🇬🇧 Student stand — step by step
+# 🇬🇧 Student setup — step by step
 
-Step-by-step guide for a student of the “AI in construction” course: set up a workstation on
-your laptop and start a dialogue with an AI agent trained in the pre-sales research skill.
+A step-by-step guide for a student of the "AI in construction" course: connect an AI agent
+trained in the pre-sales research skill in ten minutes and start a dialogue with it.
 
 > **Project repository:** https://github.com/Barbashin1970/PRECONSTRUCTION
 >
@@ -101,75 +98,57 @@ your laptop and start a dialogue with an AI agent trained in the pre-sales resea
 >
 > ![Repository QR](https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/Barbashin1970/PRECONSTRUCTION)
 
-There are **two paths**. Pick one:
+There are **three paths**. Pick one:
 
-| Path | What you need | For whom |
-|------|---------------|----------|
-| **A. VS Code + Claude Code** | A paid Claude plan (Pro/Max) or a course/team account | You want the full skill with multi-stream research |
-| **B. Perplexity (free)** | Any Perplexity account | No paid Claude — run the methodology manually |
+| Path | What you need | How the study runs |
+|---|---|---|
+| **A. VS Code + Claude Code** | a paid Claude plan (Pro, Max) or a course/team account | in full: several research streams run in parallel |
+| **B. claude.ai — website or Claude app** | a Claude account; per Anthropic's help, skills are available on the free plan too | the same stages, streams run one by one |
+| **C. Perplexity — free** | any Perplexity account | the same stages one by one, with Perplexity's web search |
 
-## 🇬🇧 Path A — VS Code + Claude Code (full skill)
+## 🇬🇧 Path A — VS Code + Claude Code
 
-### Install first
-1. **Git** — [git-scm.com/downloads](https://git-scm.com/downloads) (to download the project; optional — see step 2).
-2. **VS Code** (1.98 or newer) — [code.visualstudio.com](https://code.visualstudio.com/).
-3. Internet.
-
-### Steps
-1. **Scan the QR code** with your phone (or open the link) → you get the repo address `https://github.com/Barbashin1970/PRECONSTRUCTION`.
-2. **Get the project.** Two options:
-   - **Easiest (no Git):** on the repo page click the green **Code → Download ZIP**, unzip.
-   - **With Git:** in a terminal run
-     ```
-     git clone https://github.com/Barbashin1970/PRECONSTRUCTION
-     ```
-3. **Open the project folder in VS Code:** **File → Open Folder…** → select the project folder.
-4. **Register at Claude:** go to [claude.ai](https://claude.ai) and create a profile.
-   > ⚠️ Claude Code requires a **paid plan** (Claude **Pro** or **Max**) or a course/team account.
-   > The free tier will not run it — in that case use **Path B**. Check current plans at [claude.ai](https://claude.ai).
-5. **Install the Claude Code extension:** in VS Code open Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`),
-   search **“Claude Code”**, click **Install**. No separate command-line install needed.
-   Docs: [code.claude.com/docs/en/vs-code](https://code.claude.com/docs/en/vs-code).
-6. **Sign in:** on first launch the extension opens a browser login — sign in with your Claude profile.
-7. **Activate the skills (important, especially on Windows).** The skills live in the project’s
-   `skills/` folder. Copy both skill folders into your personal Claude skills folder so they are reliably picked up:
-   - **macOS / Linux** (terminal in the project folder):
-     ```
-     mkdir -p ~/.claude/skills && cp -R skills/preconstruction-ru skills/preconstruction-en ~/.claude/skills/
-     ```
-   - **Windows** (PowerShell in the project folder):
-     ```
-     New-Item -ItemType Directory -Force $HOME\.claude\skills | Out-Null
-     Copy-Item -Recurse -Force skills\preconstruction-ru, skills\preconstruction-en $HOME\.claude\skills\
-     ```
-   > Why: in the repo `.claude/skills/` are symlinks to the `skills/` folder. On Windows, Git often
-   > clones them as plain text, so the skill won’t appear. Copying the real folders fixes it for good.
-8. **Start working:** open the Claude Code chat in VS Code and type
+1. **Install VS Code** — [code.visualstudio.com](https://code.visualstudio.com/) and **Git** —
+   [git-scm.com/downloads](https://git-scm.com/downloads) (Claude Code fetches the plugin from
+   GitHub by cloning; macOS and Linux usually have Git already). No manual project download
+   needed: the skill installs as a plugin straight from GitHub.
+2. **Register at [claude.ai](https://claude.ai).** Claude Code requires a **paid plan** (Pro or Max)
+   or a course/team account; otherwise use path B or C.
+3. **Install the Claude Code extension:** Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`) → **"Claude Code"** → **Install**,
+   then sign in through the browser.
+4. **Install the skill.** In the Claude Code panel type
    ```
-   /preconstruction-en
+   /plugin install preconstruction --marketplace Barbashin1970/PRECONSTRUCTION
    ```
-   (or `/preconstruction-ru` for a Russian report), then describe your idea: “research this idea: …”.
-   The agent runs an interview, launches several research streams, audits them, and consolidates a
-   single report into the `research/` folder.
+   and choose **"Install for you"**. On an older version: type `/plugins`, add
+   `Barbashin1970/PRECONSTRUCTION` on the **Marketplaces** tab, then **Install** `preconstruction`
+   on the **Plugins** tab. Same on Windows, macOS and Linux.
+5. **Start:** open any folder, write "research this idea: …" — or call
+   `/preconstruction:preconstruction-en` (English report) or `/preconstruction:preconstruction-ru`
+   (Russian). The report is saved to the `research/` folder.
 
-## 🇬🇧 Path B — Perplexity (free, run the methodology manually)
+## 🇬🇧 Path B — claude.ai (website or Claude app)
 
-Same approach as the hackathon: AI as a research assistant while you drive it through the stages.
+1. **Download the skill archive** — don't unzip it:
+   [preconstruction-en.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/claude/preconstruction-en.zip).
+2. **Sign in** at [claude.ai](https://claude.ai) or open the Claude desktop app.
+3. **Enable code execution:** **Settings → Capabilities → Code execution and file creation**
+   (called **Create and edit files** in the updated settings).
+4. **Upload:** **Customize → Skills → "+" → Create skill → Upload a skill** → pick the archive.
+5. **Start:** in a new chat write "research this idea: …". The report arrives as a downloadable file.
 
-1. **Register** at [perplexity.ai](https://www.perplexity.ai) (a free account is enough).
-2. **Download the project files** (Download ZIP, see Path A step 2) — you’ll need `knowledge-base-en/`
-   (or `knowledge-base/` for Russian) and `skills/`.
-3. **Create a Space** in Perplexity (Spaces → Create).
-4. **Upload the methodology files:** from `skills/preconstruction-en/` — `SKILL.md`, all 4 files
-   from `references/` and one ready report from `examples/` (a structure sample); optionally add
-   notes from `knowledge-base-en/`. They become the reference.
-5. **Set Custom Instructions** (the agent’s role), e.g.:
-   > “You are a lead pre-sales analyst. Use the uploaded files as the methodology. Walk me through
-   > the 5 pre-sales stages: 1) problem → 2) business analysis → 3) feasibility → 4) is AI needed
-   > INSIDE the product → 5) pitch. Cite sources, separate ‘built WITH AI’ from ‘AI INSIDE’, and be
-   > honest about whether AI is needed.”
-6. **Work thread by thread:** one thread per stage (the 5 steps), then ask it to assemble a single
-   report and pitch.
+> Free-plan message limits are lower — pick the "quick" depth for a practice run. Archives
+> can't be uploaded from a phone, and Anthropic's help doesn't say whether uploaded skills
+> work in the mobile app — check for yourself.
 
-> Difference from Path A: Perplexity doesn’t run several agents in parallel — you drive it stage by
-> stage. But it’s free and needs no installation.
+## 🇬🇧 Path C — Perplexity (free)
+
+1. **Register** at [perplexity.ai](https://www.perplexity.ai).
+2. **Download the Perplexity archive:**
+   [preconstruction-en.zip](https://github.com/Barbashin1970/PRECONSTRUCTION/raw/main/zip/perplexity/preconstruction-en.zip).
+   It is a **different** archive from path B: take it from the `perplexity` folder.
+3. **Upload:** **Settings → Skills → Create skill → Upload skill** → pick the archive.
+4. **Start:** in a new thread write "research this idea: …".
+
+> No Skills section? Create a **Space**, upload the files from the unzipped archive and set
+> Custom Instructions to: "Follow the instructions in SKILL.md; the other files are its references."

@@ -1,0 +1,14 @@
+{
+  "name": "preconstruction-skills",
+  "description": "Pre-sales (preconstruction) research skills for construction and construction-IT ideas — NSU / NGAUDI course «AI in construction».",
+  "owner": {
+    "name": "Oleg Barbashin"
+  },
+  "plugins": [
+    {
+      "name": "preconstruction",
+      "source": "./",
+      "description": "Pre-sales research of a construction or construction-IT idea in Russian or English: interview, research streams, audit, report with a pitch and an AI-inside verdict."
+    }
+  ]
+}

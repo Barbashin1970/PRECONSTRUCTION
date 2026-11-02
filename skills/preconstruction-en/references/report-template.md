@@ -1,8 +1,9 @@
 # Final document template (Phase 3)
 
-Merge audit-confirmed results into one file `research/<slug>-YYYY-MM-DD.md`. Every claim has a
-source or an explicit confidence tag (primary / vendor-claim / hypothesis). To chat, surface
-Executive summary + Pitch + AI verdict.
+Merge audit-confirmed results into one document: in Claude Code — file
+`research/<slug>-YYYY-MM-DD.md`, on claude.ai — a downloadable file, in other chats — the full
+reply. Every claim has a source and a `[primary]` / `[from search results]` /
+`[vendor-claim]` / `[hypothesis]` tag. To chat, surface Executive summary + Pitch + AI verdict.
 Ready structure references are in [examples/](../examples/) (3 complete reports).
 
 ```markdown

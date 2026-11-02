@@ -1,1 +1,15 @@
+# Мусор операционных систем: валидатор каталога плагинов Anthropic такие файлы не пропускает
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+desktop.ini
+
+# Рабочая папка GigaCode
 /.gigacode
+
+# Python
+__pycache__/
+
+# Результаты прогонов claude plugin eval
+evals/results/

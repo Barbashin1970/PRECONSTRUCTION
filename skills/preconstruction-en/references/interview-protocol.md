@@ -1,7 +1,9 @@
 # Interview protocol (Phase 0)
 
 Goal — with the fewest questions, lock a scope sufficient to launch the agent streams. One or
-two questions at a time via `AskUserQuestion`. Don't ask what the user already told you.
+two questions at a time via `AskUserQuestion`; where that tool doesn't exist (claude.ai,
+Perplexity, other chats) — as numbered text questions with answer options. Don't ask what
+the user already told you.
 
 ## Step 1. Restate (no questions)
 
@@ -23,8 +25,8 @@ it right? Correct me if not."
 - Is there already a hypothesis about AI inside the product (or is that exactly what to test)?
 
 **Wave 3 — run parameters**
-- Depth: **quick** (≈4 streams, no deep web search) or **full** (streams + `deep-research` +
-  dual-voice audit)?
+- Depth: **quick** (≈4 streams, no deep web search) or **full** (streams + deep search if
+  the environment has it + dual-voice audit)?
 - Output language (default English).
 
 ## Step 3. Lock the scope
